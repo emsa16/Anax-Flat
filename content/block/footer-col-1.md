@@ -1,5 +1,7 @@
-####Videoserie i att använda Anax Flat
+####Hjälp
 
-Youtube-serie av mos i hur man använder Anax Flat på denna sida:
+Hjälpen är nära till hands:
 
-* [Youtube](https://youtu.be/BIZphoWSrxQ?list=PLKtP9l5q3ce93K_FQtlmz2rcaR_BaKIET)
+* [Forumet](https://dbwebb.se/forum/viewforum.php?f=53)
+* [Markdown-tips (på engelska)](markdown)
+* [Anax Flat-dokumentation](https://dbwebb.se/anax)

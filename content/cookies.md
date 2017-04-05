@@ -1,4 +1,4 @@
 Cookies
 ==============================================
 
-Här finns inte några cookies.
+Grattis, denna sajt använder inga cookies!

@@ -1,5 +1,3 @@
-####Hjälp
+####Läsvärt
 
-Nu behöver jag hjälp. Då går jag till:
-
-* [Forumet](https://dbwebb.se/forum/viewforum.php?f=53)
+* [Min profil på Github](https://github.com/emsa16)
