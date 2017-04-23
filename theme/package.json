@@ -1,0 +1,10 @@
+{
+    "name": "development-tools",
+    "version": "1.0.0",
+    "private": true,
+    "devDependencies": {
+        "csslint": "^0.10.0",
+        "less": "^2.7.1",
+        "less-plugin-clean-css": "^1.5.1"
+    }
+}

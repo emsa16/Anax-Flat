@@ -37,7 +37,7 @@ return [
 
 
 
-/*
+
     // Used as menu together with responsive menu
     // Name of this menu
     "navbarMax" => [
@@ -63,7 +63,7 @@ return [
             ],
         ],
     ],
-*/
+
 
 
     /**
