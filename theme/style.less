@@ -1,17 +1,18 @@
+/* stylelint-disable indentation */
+
 /**
 * Anax Flat theme.
 */
 @import url(modules.less);
 
-
-
 /** --------------------------------------------------------------
  *  Logo images
  */
 .logo-1 {
-    position: absolute;
-    top: 70px;
-    left: -140px;
+    // position: absolute;
+    // top: 70px;
+    // left: -140px;
+    display: none;
 }
 
 .site-logo-text-icon {
@@ -20,36 +21,28 @@
     }
 }
 
-
 /** --------------------------------------------------------------
  *  Header, copied from example/anax-flat/theme/header.less
  */
 
 // Size of max navbar button
-// .rm-max .rm-small .rm-button {
-//     font-size: 2em;
-// }
-
 @maxButtonFontSize: 2em;
 
 // Style navbar
-// .rm-desktop li {
-//     background-color: #096;
-// }
+@navbarItemColor: white;
+@navbarItemHoverColor: @navbarItemColor;
+@navbarItemBgColor: #030;
+@navbarItemHoverBgColor: lighten(@navbarItemBgColor, 20%);
+@maxBgColor: @navbarItemBgColor;
 
-@navbarItemBgColor: #096;
+.site-header {
+    height: 80px;
+}
 
-
-// Size each item in the header
 .site-logo-text,
 .navbar2,
 .profile {
     float: left;
-    width: 30%;
-}
-
-.site-header {
-    height: 80px;
 }
 
 // Site title
@@ -58,18 +51,48 @@
 
     a {
         text-decoration: none;
+        color: black;
     }
 }
 
-
 /** --------------------------------------------------------------
- *  Responsive design, copied from example/anax-flat/theme/media-queries.less
+ *  Responsive design
  */
-img {
+
+.navbar2 {
+    display: none;
+}
+
+.rm-navbar-max {
+    display: block;
+}
+
+.site-logo-text {
+    width: 90%;
+}
+
+.flash-wrap img {
     max-width: 100%;
 }
 
-@media screen and (max-width: 900px) {
+.sidebar {
+    //width: 100%;
+    display: none;
+}
+
+.footer-column {
+    width: 100%;
+}
+
+@media screen and (min-width: 560px) {
+    .rm-navbar-max {
+        display: none;
+    }
+
+    .navbar2 {
+        display: block;
+    }
+
     .site-logo-text {
         width: 40%;
     }
@@ -83,28 +106,50 @@ img {
     }
 }
 
-
-@media screen and (max-width: 750px) {
-    .sidebar {
-        //width: 100%;
-        display: none;
-    }
-}
-
-
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 600px) {
     .footer-column {
-        width: 100%;
+        width: 33%;
     }
 }
 
+@media screen and (min-width: 750px) {
+    .sidebar {
+        display: block;
+    }
+}
 
-@media screen and (max-width: 560px) {
-     .site-logo-text {
-         width: 90%;
-     }
+/** --------------------------------------------------------------
+ *  Other
+ */
 
-     .navbar2 {
-         display: none;
-     }
- }
+.article-img {
+    width: 250px;
+    float: right;
+    margin: 7px;
+}
+
+.byline {
+    clear: both;
+    max-width: 400px;
+    border: 1px dashed black;
+    margin: 20px auto;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.byline img {
+    width: 80px;
+}
+
+.sidebar {
+    margin: 10px;
+    background-color: #eee;
+}
+
+.footer {
+    border-top: 2px solid green;
+    margin-top: 10px;
+}

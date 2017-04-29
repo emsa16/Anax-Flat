@@ -1,7 +1,6 @@
 
-<div style="border:2px solid brown; text-align:center; width:400px; margin:20px auto;">
+<div class="byline">
 
-<i>Skriven av Emil Sandberg</i>
-<br>
-<img src="img/byline.jpg" alt="Bild på Emil Sandberg" style="width:100px;">
+<p><i>Skriven av Emil Sandberg</i></p>
+<img src="img/byline.jpg" alt="Bild på Emil Sandberg">
 </div>
