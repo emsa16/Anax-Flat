@@ -35,16 +35,6 @@
 @navbarItemHoverBgColor: lighten(@navbarItemBgColor, 20%);
 @maxBgColor: @navbarItemBgColor;
 
-.site-header {
-    height: 80px;
-}
-
-.site-logo-text,
-.navbar2,
-.profile {
-    float: left;
-}
-
 // Site title
 .site-logo-text {
     font-size: 2em;
@@ -56,71 +46,49 @@
 }
 
 /** --------------------------------------------------------------
- *  Responsive design
+ *  Other
  */
 
-.navbar2 {
-    display: none;
-}
-
-.rm-navbar-max {
-    display: block;
-}
-
-.site-logo-text {
-    width: 90%;
+body {
+    margin: 0;
 }
 
 .flash-wrap img {
-    max-width: 100%;
-}
-
-.sidebar {
-    //width: 100%;
-    display: none;
-}
-
-.footer-column {
     width: 100%;
 }
 
-@media screen and (min-width: 560px) {
-    .rm-navbar-max {
-        display: none;
+.breadcrumb-list {
+    ul {
+        margin: 0;
+        padding: 0;
     }
 
-    .navbar2 {
-        display: block;
-    }
+    li {
+        display: inline;
 
-    .site-logo-text {
-        width: 40%;
+        &::after {
+            content: " » ";
+        }
     }
+}
 
-    .navbar2 {
+.sidebar {
+    @sideBarBgColor: desaturate(lighten(@navbarItemBgColor, 80%), 30%);
+
+    background-color: @sideBarBgColor;
+}
+
+.next-previous {
+    .next,
+    .previous {
         width: 50%;
     }
 
-    .profile {
-        width: 10%;
+    .next {
+        float: right;
+        text-align: right;
     }
 }
-
-@media screen and (min-width: 600px) {
-    .footer-column {
-        width: 33%;
-    }
-}
-
-@media screen and (min-width: 750px) {
-    .sidebar {
-        display: block;
-    }
-}
-
-/** --------------------------------------------------------------
- *  Other
- */
 
 .article-img {
     width: 250px;
@@ -129,27 +97,37 @@
 }
 
 .byline {
-    clear: both;
-    max-width: 400px;
     border: 1px dashed black;
-    margin: 20px auto;
     padding: 5px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    img {
+        width: 80px;
+    }
+}
+
+.outer-wrap-footer {
+    @footerBgColor: lighten(@navbarItemBgColor, 20%);
+    @footerItemColor: @navbarItemColor;
+
+    background-color: @footerBgColor;
+    color: @footerItemColor;
+
+    a {
+        color: lightgrey;
+    }
+}
+
+.site-footer {
     text-align: center;
-}
 
-.byline img {
-    width: 80px;
-}
+    ul {
+        padding: 0;
+    }
 
-.sidebar {
-    margin: 10px;
-    background-color: #eee;
-}
-
-.footer {
-    border-top: 2px solid green;
-    margin-top: 10px;
+    li {
+        display: inline;
+    }
 }

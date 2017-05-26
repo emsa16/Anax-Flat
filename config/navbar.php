@@ -27,6 +27,12 @@ return [
                 "title" => t("Om denna webbsida")
             ],
 
+            "grid" => [
+                "text"  => t("Grid-test"),
+                "url"   => $this->di->get("url")->create("grid"),
+                "title" => t("Grid-test")
+            ],
+
             "test" => [
                 "text"  => t("Test"),
                 "url"   => $this->di->get("url")->create("test"),
@@ -60,6 +66,12 @@ return [
                 "text"  => t("Om"),
                 "url"   => $this->di->get("url")->create("about"),
                 "title" => t("Om denna webbsida")
+            ],
+
+            "grid" => [
+                "text"  => t("Grid-test"),
+                "url"   => $this->di->get("url")->create("grid"),
+                "title" => t("Grid-test")
             ],
 
             "test" => [

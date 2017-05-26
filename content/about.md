@@ -1,7 +1,7 @@
 Om denna sida
 ==============================================
 
-<img src="img/design.jpg" alt="Boken: The Principles of Beautiful Web Design" style="width:250px; float:right">
+<img class="article-img" src="img/design.jpg" alt="Boken: The Principles of Beautiful Web Design">
 
 Denna sida är en del av [design-kursen](http://dbwebb.se/design).
 
