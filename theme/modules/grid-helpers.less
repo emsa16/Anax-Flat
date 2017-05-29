@@ -1,11 +1,20 @@
 /**
  * Show grid.
  */
-.showGrid(@maxWidth: 1100px, @gridImage) {
-    background: url("@{gridImage}") repeat-y fixed center center;
-    background-size: 100% auto;
 
-    @media (min-width: @maxWidth) {
-        background-size: @maxWidth auto;
+#vgrid {
+    .showGrid(@maxWidth: 1100px, @gridImage) {
+        background: url("@{gridImage}") repeat-y fixed center center;
+        background-size: 100% auto;
+
+        @media (min-width: @maxWidth) {
+            background-size: @maxWidth auto;
+        }
+    }
+}
+
+#hgrid {
+    .showGrid(@gridImage) {
+        background-image: url("@{gridImage}");
     }
 }

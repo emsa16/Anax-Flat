@@ -1,10 +1,10 @@
 /**
  * Typographic defaults.
  */
-@colorH1BorderBottom: #666;
-@colorH2BorderBottom: #999;
-@borderSizeH1: 1px;
-@borderSizeH2: 1px;
+@colorH1BorderBottom: green;
+@colorH2BorderBottom: red;
+@borderSizeH1: 3px;
+@borderSizeH2: 5px;
 
 
 /**
@@ -13,7 +13,7 @@
 .typographyHeadings() {
     h1, h2, h3, h4, h5, h6 {
         font-family: @fontFamilyHeadings;
-        margin-top: @magicNumber;
+        margin-top: 0;
         margin-bottom: @magicNumber;
         img {
             margin: 0;
@@ -23,39 +23,13 @@
     h1 {
         .fontSize(@fontSizeH1);
         font-weight: normal;
-
-        border-bottom: @borderSizeH1 solid @colorH1BorderBottom;
-        margin-bottom: @magicNumber - @borderSizeH1;
-
-        // If header below h1, then assume larger margin top
-        & ~ h1,
-        & ~ h2,
-        & ~ h3,
-        & ~ h4,
-        & ~ h5,
-        & ~ h6,
-         {
-            margin-top: @magicNumber * 2;
-        }
-
-        // Single margin when subheader follows directly
-        & + h2 {
-            margin-top: @magicNumber;
-        }
+        .border-bottom(@borderSizeH1, @colorH1BorderBottom);
     }
 
     h2 {
         .fontSize(@fontSizeH2);
         font-weight: normal;
-
-        margin-top: @magicNumber * 2;
-        margin-bottom: @magicNumber - @borderSizeH2;
-
-        border-bottom: @borderSizeH2 solid @colorH2BorderBottom;
-
-        & + h3 {
-            margin-top: @magicNumber;
-        }
+        .border-bottom(@borderSizeH2, @colorH2BorderBottom);
     }
 
     h3 {
@@ -89,15 +63,22 @@
 @sizeBlockquoteBorder: 4px;
 
 .typographyTextElements() {
+    i,
+    b,
+    em,
+    strong {
+       line-height: 1em;
+    }
+
     p {
-        margin-top: @magicNumber;
+        margin-top: 0;
         margin-bottom: @magicNumber;
     }
 
     small,
     .small,
     .smaller {
-        font-size: @fontSizeSmall; 
+        font-size: @fontSizeSmall;
     }
 
     strong,
@@ -164,6 +145,7 @@
     .code {
         font-size: @fontSizeCodeInline;
         font-family: @fontFamilyMonospace;
+        line-height: 1em;
     }
 
     code,
@@ -184,7 +166,7 @@
     }
 
     pre {
-        margin-top: @magicNumber;
+        margin-top: 0;
         margin-bottom: @magicNumber;
     }
 
@@ -198,8 +180,8 @@
         border-top:    @borderSizeCodeblock solid @colorCodeBlockBorder;
         border-bottom: @borderSizeCodeblock solid @colorCodeBlockBorder;
 
-        margin-top:    @magicNumber - @borderSizeCodeblock;
-        margin-bottom: @magicNumber - @borderSizeCodeblock;
+        margin-top: -(@borderSizeCodeblock) * 2;
+        margin-bottom: @magicNumber;
 
         padding-top:    @magicNumber / 2;
         padding-bottom: @magicNumber / 2;
@@ -215,16 +197,14 @@
  * Lists
  */
 .typographyListElements() {
-    //ul,ol{margin:0.6875em 1.5em 1.375em 0;padding-left:1.5em;}
-
-    ul, 
+    ul,
     ol {
-        margin-top:    @magicNumber;
+        margin-top:    0;
         margin-bottom: @magicNumber;
-        padding-left: 1.5em;
+        padding-left: 2.5em;
 
-        p { 
-            margin-top:    @magicNumber / 2;
+        p {
+            margin-top:    0;
             margin-bottom: @magicNumber / 2;
         }
 
@@ -235,7 +215,11 @@
     }
 
     ul {
-          list-style-type: disc;
+        list-style-type: disc;
+        // No idea why this is not working, but solution below is...
+        // .rm-navbar & {
+        //     list-style-type: none;
+        // }
     }
 
     ol {
@@ -244,7 +228,7 @@
 
     // dl dt dd
     dl {
-        margin-top:    @magicNumber;
+        margin-top:    0;
         margin-bottom: @magicNumber;
 
         &.horizontal {
@@ -254,21 +238,21 @@
                 clear: left;
                 float: left;
                 width: @margin
-            } 
+            }
 
             dd {
                 margin-left: @margin + 1em;
                 display:block;
-            } 
+            }
         }
     }
 
-    dt { 
-        //font-weight: bold;
+    dt {
+        font-weight: bold;
     }
 
-    dd { 
-        margin-left: 1.5em;
+    dd {
+        margin-left: 2.5em;
     }
 }
 
@@ -290,14 +274,18 @@
 
 .typographyTableElements() {
     table {
-
+        border-spacing: 0;
+        th,
+        td {
+           padding: 0;
+        }
     }
 
-    article table, 
+    article .table,
     .table,
     .table1,
     .table2 {
-        margin-top:    @magicNumber;
+        margin-top:    0;
         margin-bottom: @magicNumber;
     }
 
@@ -309,18 +297,18 @@
     }
 
     // A more styled table layout
-    article table,
+    article .table,
     .table,
-    .table2 { 
+    .table2 {
         border-collapse: collapse;
 
-        caption { 
+        caption {
             .fontSize(@fontSizeSmall);
             text-align: left;
             font-style: italic;
         }
 
-        thead { 
+        thead {
             box-shadow:  0 1px 0 @colorTableHeaderBorder;
         }
 
@@ -332,7 +320,7 @@
 
         th,
         td {
-            padding: @magicNumber / 4;
+            padding: @magicNumber / 2;
         }
 
         tr {
@@ -346,7 +334,7 @@
         }
 
         tfoot {
-            
+
         }
     }
 
@@ -375,7 +363,7 @@
         border: 0;
         height: 1px;
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
- 
+
         margin-top: 1.5 * @magicNumber - 1px;
         margin-bottom: 1.5 * @magicNumber;
 
@@ -386,6 +374,35 @@
             left: 50%;
             padding: 0 0.25em;
             background-color: @bgColorHr;
+        }
+    }
+
+    .inner-wrap-header {
+        font-family: @fontFamilyHeadings;
+    }
+
+    .rm-default {
+        margin-bottom: 0;
+        line-height: 3em;
+        padding-left: 0;
+        a {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    .rm-navbar ul {
+        list-style-type: none;
+    }
+
+    .rm-navbar i {
+        font-style: normal;
+    }
+
+    .flash-wrap {
+        line-height: 0;
+        img {
+            height: @magicNumber * 8;
         }
     }
 }

@@ -4,17 +4,35 @@
  * Grid layout
  */
 
-@magicNumber: 24px;
-
+/* Vertical grid variables */
 @columnWidth:   60;
 @gutterWidth:   20;
 @columns:       12;
+@gridWidth:     960px;
+@vgridImage:    "../img/grid/grid940x12x60x20-nomargin.png";
+// @vgridImage: "../img/grid/grid960x24x30x10.png";
+// @vgridImage: "../img/grid/grid960x12x60x20.png";
+// @vgridImage: "../img/grid/grid950x24x30x10-nomargin.png";
 
-@gridWidth: 960px;
-// @gridImage: "../img/grid/grid960x24x30x10.png";
-// @gridImage: "../img/grid/grid960x12x60x20.png";
-// @gridImage: "../img/grid/grid950x24x30x10-nomargin.png";
-@gridImage: "../img/grid/grid940x12x60x20-nomargin.png";
+/* Horizontal grid variables */
+@magicNumber:   24px;
+@fontSizeBody:  16px;
+@hgridImage:    "../img/grid/horisontal-grid-24.png";
+// @hgridImage: "../img/grid/horisontal-grid-22.png";
+
+.wrap-all {
+    html.hgrid &,
+    body.route-typography & {
+        #hgrid .showGrid(@hgridImage);
+    }
+    .font();
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+}
 
 .inner-wrap {
     max-width: @gridWidth;
@@ -22,7 +40,7 @@
 
     html.vgrid &,
     body.route-grid & {
-        .showGrid(@gridWidth, @gridImage);
+        #vgrid .showGrid(@gridWidth, @vgridImage);
     }
     // &.inner-wrap-footer,
     // &.inner-wrap-header {
@@ -30,7 +48,7 @@
     //     max-width: @gridWidth;
     //     .container();
     //     html.vgrid & {
-    //         .showGrid(@gridWidth, @gridImage);
+    //         .showGrid(@gridWidth, @vgridImage);
     //     }
     // }
 }
@@ -55,7 +73,7 @@
     // background-color: rgba(255, 255, 0, 0.5);
     .column(@columns / 4 * 3); // 9 columns on a 12 column grid
 
-    @media screen and (min-width: 560px) {
+    @media screen and (min-width: 600px) {
         .column(@columns / 3); // 4 columns on a 12 column grid
     }
 }
@@ -64,7 +82,7 @@
     // background-color: rgba(255, 255, 0, 0.5);
     display: none;
 
-    @media screen and (min-width: 560px) {
+    @media screen and (min-width: 600px) {
         .column(@columns / 3 * 2); // 8 columns on a 12 column grid
     }
 }
@@ -72,7 +90,7 @@
 .profile {
     .column(@columns / 4); // 3 columns on a 12 column grid
 
-    @media screen and (min-width: 560px) {
+    @media screen and (min-width: 600px) {
         display: none;
     }
 

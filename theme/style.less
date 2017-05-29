@@ -91,12 +91,16 @@ body {
 }
 
 .article-img {
-    width: 250px;
+    max-width: 50%;
     float: right;
     margin: 7px;
+    @media screen and (min-width: 460px) {
+        width: 250px;
+    }
 }
 
 .byline {
+    height: @magicNumber * 5;
     border: 1px dashed black;
     padding: 5px;
     display: flex;

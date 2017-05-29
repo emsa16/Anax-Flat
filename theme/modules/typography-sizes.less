@@ -1,5 +1,5 @@
 /**
- * Typographic sizes for horisontal rythm. 
+ * Typographic sizes for horisontal rythm.
  */
 
 /**
@@ -9,6 +9,7 @@
 @magicNumber:   24px; /* 16px - 100%/1.5 */
 //@magicNumber:   22px; /* 16px - 100%/1.375 */
 @fontSizeBody:  16px;
+@fontSizeBodyEm:  1em;
 @lineHeight:    (unit(@magicNumber) / unit(@fontSizeBody));
 
 @fontSizeH1: 2.375em;
@@ -19,8 +20,9 @@
 @fontSizeH6: 0.875em;
 
 @fontSizeCodeInline:  1.25em;
-@fontSizeCodeBlock:   1.25em;
-@lineHeightCodeBlock: 1.6;
+@fontSizeCodeBlockEm: 1.25;
+@fontSizeCodeBlock:   @fontSizeBody * @fontSizeCodeBlockEm;
+@lineHeightCodeBlock: 1.2;
 
 @fontSizeSupSub: 0.75em;
 

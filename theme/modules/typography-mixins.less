@@ -11,3 +11,8 @@
 }
 
 // 5/4 for smaller font-size, incremental leading.
+
+.border-bottom(@width: 1px, @color: #000) {
+   margin-top: -(@width);
+   border-bottom: @width dashed @color;
+}

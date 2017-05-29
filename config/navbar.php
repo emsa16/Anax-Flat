@@ -27,10 +27,16 @@ return [
                 "title" => t("Om denna webbsida")
             ],
 
-            "grid" => [
-                "text"  => t("Grid-test"),
+            "vgrid" => [
+                "text"  => t("Vgrid"),
                 "url"   => $this->di->get("url")->create("grid"),
-                "title" => t("Grid-test")
+                "title" => t("Testa vertikalt grid")
+            ],
+
+            "hgrid" => [
+                "text"  => t("Hgrid"),
+                "url"   => $this->di->get("url")->create("typography"),
+                "title" => t("Testa typografiskt (horisontellt) grid")
             ],
 
             "test" => [
@@ -68,10 +74,16 @@ return [
                 "title" => t("Om denna webbsida")
             ],
 
-            "grid" => [
-                "text"  => t("Grid-test"),
+            "vgrid" => [
+                "text"  => t("Vgrid"),
                 "url"   => $this->di->get("url")->create("grid"),
-                "title" => t("Grid-test")
+                "title" => t("Testa vertikalt grid")
+            ],
+
+            "hgrid" => [
+                "text"  => t("Hgrid"),
+                "url"   => $this->di->get("url")->create("typography"),
+                "title" => t("Testa typografiskt (horisontellt) grid")
             ],
 
             "test" => [
