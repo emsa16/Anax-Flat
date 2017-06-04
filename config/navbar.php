@@ -39,6 +39,13 @@ return [
                 "title" => t("Testa typografiskt (horisontellt) grid")
             ],
 
+            "analysis" => [
+                "text"  => t("Analyser"),
+                "url"   => $this->di->get("url")->create("analysis"),
+                "title" => t("Analysuppgifter"),
+                "mark-if-parent" => true,
+            ],
+
             "test" => [
                 "text"  => t("Test"),
                 "url"   => $this->di->get("url")->create("test"),
