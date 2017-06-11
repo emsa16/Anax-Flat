@@ -1,0 +1,59 @@
+/**
+* Header banner values and rules
+*/
+
+// READ THIS
+//
+// There are several problems with the CSS filters. hue-rotate() does not
+// adjust according to HSL degrees and jumps unexpectedly and changes light
+// level of the color to something more than half darker.
+// brightness() multiplies each RGB channel so if one channel is at 0 that
+// channel will not be modified by this.
+// https://webplatform.github.io/docs/css/functions/hue-rotate/
+// https://codepen.io/LukyVj/full/RaoePY
+
+
+
+// HSL values for banner base color
+@bannerHue: 260;
+@bannerSat: 52;
+@bannerLight: 50;
+
+// HSL default values for banner target color, to be changed in each theme
+@hue-primary-0: 260;
+@sat-primary-0: 52;
+@light-primary-0: 50;
+
+// Light boost to correct for hue-rotate darkening the color
+@light-extra: 100;
+
+// Calculating difference values to add to filter
+@hue-filter: unit((@hue-primary-0 - @bannerHue), deg);
+@sat-filter: unit((@sat-primary-0 / @bannerSat * 100), %);
+@light-filter: unit((@light-primary-0 / @bannerLight * 100), %);
+@extralight-filter: unit((@light-extra), %);
+
+.outer-wrap-header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-image: url("../img/header.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: hue-rotate(@hue-filter) saturate(@sat-filter) brightness(@light-filter) brightness(@extralight-filter);
+    height: @magicNumber * 3;
+
+    @media screen and (min-width: 700px) {
+        height: @magicNumber * 5;
+    }
+}
+
+.outer-wrap-header {
+    height: @magicNumber * 3;
+
+    @media screen and (min-width: 700px) {
+        height: @magicNumber * 5;
+    }
+}

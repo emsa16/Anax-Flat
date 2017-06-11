@@ -8,25 +8,31 @@
  * the same modules.
  */
 
+// ??? What does above mean with overriding modules by copying them to base folder?
+// What purpose is that for?
+
 // Reset, or normalize the browser style
 @import url(normalize.less);
 
 // Basic region structure
 //@import url(regions.less);
 
-// Responsive menu
-@import url(responsive-menu.less);
-
-//Grid system
+// Vertical grid system
 @import url(grid-float.less);
 // @import url(grid-flex.less);
 @import url(grid-helpers.less);
 
-// Typographic grid
-@import url(typography-font-families.less);
+// Typographical grid system
 @import url(typography-sizes.less);
+@import url(typography-font-families.less);
 @import url(typography-mixins.less);
 @import url(typography-defaults.less);
 
+// Style defaults, orifinally from typography-defaults.less
+@import url(style-defaults.less);
+
 //Grid layout
 @import url(layout.less);
+
+// Responsive menu
+@import url(responsive-menu.less);

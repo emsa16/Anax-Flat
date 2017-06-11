@@ -1,38 +1,20 @@
 /* stylelint-disable indentation */
 
 /**
- * Grid layout
+ * Vertical and horizontal grid layout
  */
+
+/* VERTICAL GRID LAYOUT*/
 
 /* Vertical grid variables */
 @columnWidth:   60;
 @gutterWidth:   20;
 @columns:       12;
-@gridWidth:     960px;
+@gridWidth:     @columns * (@columnWidth + @gutterWidth) * 1px;
 @vgridImage:    "../img/grid/grid940x12x60x20-nomargin.png";
 // @vgridImage: "../img/grid/grid960x24x30x10.png";
 // @vgridImage: "../img/grid/grid960x12x60x20.png";
 // @vgridImage: "../img/grid/grid950x24x30x10-nomargin.png";
-
-/* Horizontal grid variables */
-@magicNumber:   24px;
-@fontSizeBody:  16px;
-@hgridImage:    "../img/grid/horisontal-grid-24.png";
-// @hgridImage: "../img/grid/horisontal-grid-22.png";
-
-.wrap-all {
-    html.hgrid &,
-    body.route-typography & {
-        #hgrid .showGrid(@hgridImage);
-    }
-    .font();
-    .typographyHeadings();
-    .typographyTextElements();
-    .typographyCodeElements();
-    .typographyListElements();
-    .typographyTableElements();
-    .typographyOtherElements();
-}
 
 .inner-wrap {
     max-width: @gridWidth;
@@ -47,7 +29,9 @@
     //     @gridWidth: 100%;
     //     max-width: @gridWidth;
     //     .container();
-    //     html.vgrid & {
+    //
+    //     html.vgrid &,
+    //     body.route-grid & {
     //         .showGrid(@gridWidth, @vgridImage);
     //     }
     // }
@@ -57,47 +41,38 @@
     .row();
 }
 
-.outer-wrap-flash,
-.outer-wrap-breadcrumb,
-.outer-wrap-main,
-.outer-wrap-after-main,
-.footer-column-wrapper {
-    margin-bottom: @magicNumber;
-}
-
-.footer-column-wrapper {
-    .clearfix();
-}
-
 .site-logo-text {
     // background-color: rgba(255, 255, 0, 0.5);
     .column(@columns / 4 * 3); // 9 columns on a 12 column grid
+    .push(@columns / 12); // 1 column on a 12 column grid
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 700px) {
         .column(@columns / 3); // 4 columns on a 12 column grid
+        .push(@columns / 12); // 1 column on a 12 column grid
     }
+    .clearfix();
 }
 
 .navbar2 {
     // background-color: rgba(255, 255, 0, 0.5);
     display: none;
 
-    @media screen and (min-width: 600px) {
-        .column(@columns / 3 * 2); // 8 columns on a 12 column grid
+    @media screen and (min-width: 700px) {
+        .column(@columns);
+        .push(@columns / 6); // 2 columns on a 12 column grid
+    }
+
+    @media screen and (min-width: 800px) {
+        .column(@columns);
+        .push(@columns / 4); // 3 columns on a 12 column grid
     }
 }
 
 .profile {
     .column(@columns / 4); // 3 columns on a 12 column grid
 
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 700px) {
         display: none;
-    }
-
-    .rm-max.rm-navbar {
-        position: absolute;
-        top: 6px;
-        right: 20px;
     }
 }
 
@@ -137,6 +112,10 @@
     box-sizing: border-box;
 }
 
+.footer-column-wrapper {
+    .clearfix();
+}
+
 .footer-column {
     // background-color: rgba(200, 100, 0, 0.5);
     .column(@columns);
@@ -147,6 +126,33 @@
 }
 
 .site-footer {
-    .column(@columns);
     // background-color: rgba(0, 0, 255, 0.5);
+    .column(@columns);
+}
+
+/* HORIZONTAL GRID LAYOUT*/
+
+/* Horizontal grid variables */
+@magicNumber:   24px;
+@fontSizeBody:  16px;
+@hgridImage:    "../img/grid/horisontal-grid-24-transp.png";
+// @hgridImage: "../img/grid/horisontal-grid-22-transp.png";
+
+.wrap-all {
+
+    // Set typographical defaults
+    .font();
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+    .styleTextElements();
+    .styleCodeElements();
+
+    html.hgrid &,
+    body.route-typography & {
+        #hgrid .showGrid(@hgridImage);
+    }
 }

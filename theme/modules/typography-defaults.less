@@ -1,10 +1,9 @@
+/* stylelint-disable indentation */
+
 /**
  * Typographic defaults.
  */
-@colorH1BorderBottom: green;
-@colorH2BorderBottom: red;
-@borderSizeH1: 3px;
-@borderSizeH2: 5px;
+
 
 
 /**
@@ -15,21 +14,16 @@
         font-family: @fontFamilyHeadings;
         margin-top: 0;
         margin-bottom: @magicNumber;
-        img {
-            margin: 0;
-        }
     }
 
     h1 {
         .fontSize(@fontSizeH1);
         font-weight: normal;
-        .border-bottom(@borderSizeH1, @colorH1BorderBottom);
     }
 
     h2 {
         .fontSize(@fontSizeH2);
         font-weight: normal;
-        .border-bottom(@borderSizeH2, @colorH2BorderBottom);
     }
 
     h3 {
@@ -56,12 +50,6 @@
 /**
  * Text elements
  */
-@colorTypographyMark: #000;
-@bgColorTypographyMark:  #ffff99;
-
-@colorBlockquoteBorder: #eee;
-@sizeBlockquoteBorder: 4px;
-
 .typographyTextElements() {
     i,
     b,
@@ -75,20 +63,14 @@
         margin-bottom: @magicNumber;
     }
 
-    small,
-    .small,
-    .smaller {
+    small {
         font-size: @fontSizeSmall;
+        // temp: Behövs här lineHeight eller att man kör .fontSize?
     }
 
     strong,
     b {
         font-weight: bold;
-    }
-
-    mark {
-        color: @colorTypographyMark;
-        background-color: @bgColorTypographyMark;
     }
 
     abbr[title],
@@ -119,7 +101,6 @@
     }
 
     blockquote {
-        border-left: @sizeBlockquoteBorder solid @colorBlockquoteBorder;
         padding-left: 1em;
         margin-left: 0;
         margin-bottom: @magicNumber;
@@ -131,12 +112,6 @@
 /**
  * Display source code.
  */
-@borderColorCodeInline: #ccc;
-@bgColorCodeInline:     #eee;
-@bgColorCodeBlock:      #eee;
-@colorCodeBlockBorder:  #ccc;
-@borderSizeCodeblock:   1px;
-
 .typographyCodeElements() {
     pre,
     code,
@@ -146,15 +121,6 @@
         font-size: @fontSizeCodeInline;
         font-family: @fontFamilyMonospace;
         line-height: 1em;
-    }
-
-    code,
-    samp {
-        border: 1px solid @borderColorCodeInline;
-    }
-
-    code {
-        background-color: @bgColorCodeInline;
     }
 
     pre,
@@ -177,17 +143,62 @@
 
     div.code,
     pre code {
-        border-top:    @borderSizeCodeblock solid @colorCodeBlockBorder;
-        border-bottom: @borderSizeCodeblock solid @colorCodeBlockBorder;
-
-        margin-top: -(@borderSizeCodeblock) * 2;
         margin-bottom: @magicNumber;
 
         padding-top:    @magicNumber / 2;
         padding-bottom: @magicNumber / 2;
         padding-left: 0.5em;
+    }
+}
 
-        background-color: @bgColorCodeBlock;
+
+
+/**
+ * Tables. Because of the need for padding on TH and TD, the vertical rhythm
+ * on table cells has to be 1.5*@magic-number.
+ */
+.typographyTableElements() {
+    table {
+        margin-top:    0;
+        margin-bottom: @magicNumber;
+        border-spacing: 0;
+        th,
+        td {
+           padding: 0;
+        }
+    }
+
+    table.full-width {
+        width: 100%;
+    }
+
+    // A more styled table layout
+    table.styled {
+        border-collapse: collapse;
+
+        caption {
+            .fontSize(@fontSizeSmall);
+            text-align: left;
+            font-style: italic;
+        }
+
+        th {
+            vertical-align: bottom;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        th,
+        td {
+            padding: @magicNumber / 2;
+        }
+    }
+
+    table.palette {
+        td {
+            width: @magicNumber * 4;
+            height: @magicNumber * 4;
+        }
     }
 }
 
@@ -203,11 +214,6 @@
         margin-bottom: @magicNumber;
         padding-left: 2.5em;
 
-        p {
-            margin-top:    0;
-            margin-bottom: @magicNumber / 2;
-        }
-
         & ul,
         & ol {
             margin: 0;
@@ -216,14 +222,10 @@
 
     ul {
         list-style-type: disc;
-        // No idea why this is not working, but solution below is...
-        // .rm-navbar & {
-        //     list-style-type: none;
-        // }
     }
 
     ol {
-          list-style-type: decimal;
+        list-style-type: decimal;
     }
 
     // dl dt dd
@@ -259,150 +261,15 @@
 
 
 /**
- * Tables. Because of the need for padding on TH and TD, the vertical rhythm
- * on table cells has to be 1.5*@magic-number.
- */
-@colorTableHeaderBorder:    #aaa;
-@sizeTableHeaderBorder:     2px;
-
-@bgColorTableStripe:        #fafafa;
-@colorTableRowBorder:       #ccc;
-
-@colorTableRowHover:        #000;
-@bgColorTableRowHover:      #f6f6f6;
-@colorTableRowBorderHover:  #666;
-
-.typographyTableElements() {
-    table {
-        border-spacing: 0;
-        th,
-        td {
-           padding: 0;
-        }
-    }
-
-    article .table,
-    .table,
-    .table1,
-    .table2 {
-        margin-top:    0;
-        margin-bottom: @magicNumber;
-    }
-
-    table.full-width,
-    article .table,
-    .table,
-    .table2 {
-        width: 100%;
-    }
-
-    // A more styled table layout
-    article .table,
-    .table,
-    .table2 {
-        border-collapse: collapse;
-
-        caption {
-            .fontSize(@fontSizeSmall);
-            text-align: left;
-            font-style: italic;
-        }
-
-        thead {
-            box-shadow:  0 1px 0 @colorTableHeaderBorder;
-        }
-
-        th {
-            vertical-align: bottom;
-            font-weight: bold;
-            text-align: left;
-        }
-
-        th,
-        td {
-            padding: @magicNumber / 2;
-        }
-
-        tr {
-            box-shadow:  0 1px 0 @colorTableRowBorder;
-
-            &:hover {
-                color: @colorTableRowHover;
-                background-color: @bgColorTableRowHover;
-                box-shadow:  0 1px 0 @colorTableRowBorderHover;
-            }
-        }
-
-        tfoot {
-
-        }
-    }
-
-    // Stripe each even row in table
-    table.striped {
-        tbody {
-            tr:nth-child(even) td,
-            tr.even td {
-                background-color: @bgColorTableStripe;
-            }
-        }
-    }
-}
-
-
-
-/**
  * More typography elements
  */
-@bgColorHr: #fff;
-
 .typographyOtherElements() {
     hr {
-        position: relative;
-        top: -2px;
         border: 0;
         height: 1px;
-        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+        background-color: black;
 
         margin-top: 1.5 * @magicNumber - 1px;
         margin-bottom: 1.5 * @magicNumber;
-
-        &:after {
-            content: "§";
-            position: relative;
-            top: -0.7em;
-            left: 50%;
-            padding: 0 0.25em;
-            background-color: @bgColorHr;
-        }
-    }
-
-    .inner-wrap-header {
-        font-family: @fontFamilyHeadings;
-    }
-
-    .rm-default {
-        margin-bottom: 0;
-        line-height: 3em;
-        padding-left: 0;
-        a {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-    }
-
-    .rm-navbar ul {
-        list-style-type: none;
-    }
-
-    .rm-navbar i {
-        font-style: normal;
-    }
-
-    .flash-wrap {
-        line-height: 0;
-        img {
-            height: @magicNumber * 8;
-        }
     }
 }

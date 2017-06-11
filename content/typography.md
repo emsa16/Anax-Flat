@@ -74,7 +74,7 @@ height: 80px;
 
 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
-<table class="table1">
+<table>
   <caption>Table 0. Base formatted table</caption>
   <thead>
     <tr>
@@ -100,7 +100,7 @@ height: 80px;
   </tbody>
 </table>
 
-<table class="table1 full-width">
+<table class="full-width">
   <caption>Table 1. Base formatted table full width</caption>
   <thead>
     <tr>
@@ -134,7 +134,7 @@ height: 80px;
 
 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
-<table class="table2">
+<table class="styled full-width">
   <caption>Table 2. More formatted table</caption>
   <thead>
     <tr>
@@ -170,7 +170,7 @@ height: 80px;
 
 <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
 
-<table class="table2 striped">
+<table class="styled striped full-width">
   <caption>Table 3. More formatted and striped table</caption>
   <thead>
     <tr>

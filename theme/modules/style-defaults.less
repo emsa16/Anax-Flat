@@ -1,0 +1,57 @@
+/* stylelint-disable indentation */
+
+/**
+ * Style defaults for borders and colors, include for better readibility
+ */
+
+
+/**
+ * Text elements
+ */
+@colorTypographyMark: #000;
+@bgColorTypographyMark:  #ff9;
+
+@colorBlockquoteBorder: #eee;
+@sizeBlockquoteBorder: 4px;
+
+.styleTextElements() {
+    mark {
+        color: @colorTypographyMark;
+        background-color: @bgColorTypographyMark;
+    }
+
+    blockquote {
+        border-left: @sizeBlockquoteBorder solid @colorBlockquoteBorder;
+    }
+}
+
+/**
+ * Display source code.
+ */
+@borderColorCodeInline: #ccc;
+@bgColorCodeInline:     #eee;
+@bgColorCodeBlock:      #eee;
+@colorCodeBlockBorder:  #ccc;
+@borderSizeCodeblock:   1px;
+
+.styleCodeElements() {
+    code,
+    samp {
+        border: 1px solid @borderColorCodeInline;
+    }
+
+    code {
+        background-color: @bgColorCodeInline;
+    }
+
+    div.code,
+    pre code {
+        border-top:    @borderSizeCodeblock solid @colorCodeBlockBorder;
+        border-bottom: @borderSizeCodeblock solid @colorCodeBlockBorder;
+        // Lägg även till vänster och höger-border
+
+        margin-top: -(@borderSizeCodeblock) * 2;
+
+        background-color: @bgColorCodeBlock;
+    }
+}

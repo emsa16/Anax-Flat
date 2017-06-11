@@ -1,0 +1,119 @@
+/* stylelint-disable indentation */
+
+/**
+* Anax Flat colourful theme.
+*/
+@import url(light.less);
+
+@color-primary-1: #53b26b;
+
+@color-secondary-1-0: #a896cc;
+
+@color-secondary-2-0: #b28d5c;
+@color-secondary-2-1: #ff9100;  /* Accent color */
+
+// Source:
+// https://color.adobe.com/sv/create/color-wheel/?base=2&rule=Triad&selected=4&name=Mitt%20Color-tema&mode=rgb&rgbvalues=0.3271585507725316,0.7,0.42106745940141266,0.8085819485066539,0.6673693582464737,1,0.5673693582464738,1,0.676337584527826,1,0.5672848558738224,0,0.7,0.5538108886057392,0.3621585507725316&swatchOrder=0,1,2,3,4
+
+
+/** --------------------------------------------------------------
+ *  General
+ */
+
+body {
+    background-color: lighten(@color-secondary-2-0, 40);
+}
+
+/** --------------------------------------------------------------
+ *  Header, originally from example/anax-flat/theme/header.less
+ */
+
+@navbarItemBgColor: @color-secondary-2-1;
+@navbarItemHoverBgColor: darken(@navbarItemBgColor, 10);
+@navbarItemSelectedBgColor: @navbarItemHoverBgColor;
+
+@maxButtonColor: @color-secondary-2-1;
+@maxButtonClickedColor: @maxButtonColor;
+@maxBgColor: @color-secondary-1-0;
+
+.site-logo-text a {
+    color: lightgrey;
+    &:hover {
+        color: white;
+    }
+}
+
+.rm-desktop a {
+    border-radius: 6px;
+}
+
+.outer-wrap-header::before {
+    filter: hue-rotate(1deg) saturate(0.2) brightness(2);
+}
+
+/** --------------------------------------------------------------
+ * Headings
+ */
+
+@fontFamilyHeadings: @fontFamilySansDark;
+
+h1, h2, h3, h4, h5, h6 {
+    color: @color-primary-1;
+}
+
+@colorH1BorderBottom: black;
+@colorH2BorderBottom: black;
+@sizeH1BorderBottom:  2px;
+@sizeH2BorderBottom:  1px;
+@styleBorderBottom:   solid;
+
+h1 {
+    .border-bottom(@sizeH1BorderBottom, @styleBorderBottom, @colorH1BorderBottom);
+}
+
+h2 {
+    .border-bottom(@sizeH2BorderBottom, @styleBorderBottom, @colorH2BorderBottom);
+}
+
+/** --------------------------------------------------------------
+ * Tables
+ */
+
+@bgColorTableStripe:        lighten(@color-secondary-2-0, 40);
+@bgColorTableRowHover:      lighten(@color-primary-1, 20);
+
+/** --------------------------------------------------------------
+ *  Other
+ */
+
+@footerBgColor: transparent;
+@footerItemLinkColor: @color-secondary-2-1;
+@footerItemHoverColor: lighten(@color-secondary-2-1, 20);
+
+@bylineBorderColor: @color-secondary-2-0;
+@bylineBorderStyle: solid;
+@bylineBgColor: white;
+
+.inner-wrap-main {
+    background-color: white;
+    border-radius: 10px;
+}
+
+a {
+    color: @color-secondary-2-1;
+    &:hover {
+        color: lighten(@color-secondary-2-1, 20);
+    }
+}
+
+hr {
+    background-image: linear-gradient(to right, white, black, white);
+
+    &:after {
+        color: black;
+    }
+}
+
+.sidebar {
+    border-style: none;
+}

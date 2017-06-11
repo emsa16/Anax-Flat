@@ -24,9 +24,7 @@ return [
             // Style and stylesheets
             "stylesheets" => [
                 "css/style.min.css",
-                "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
             ],
-            // "stylesheets" => ["css/default.min.css"],
             "styleInline" => null,
 
             // JavaScript
@@ -56,7 +54,7 @@ return [
             "template" => "default/header",
             "data" => [
                 "homeLink"      => "",
-                "siteLogoText"  => "Anax Flat",
+                "siteLogoText"  => "Emils me-sida",
                 "siteLogoTextIcon" => "img/favicon/favicon_40x40.png",
                 "siteLogoTextIconAlt" => "Small logo",
                 "siteLogo"      => null, //"img/anax.png",

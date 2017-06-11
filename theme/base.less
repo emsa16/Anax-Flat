@@ -1,0 +1,246 @@
+/* stylelint-disable indentation */
+
+/**
+* Anax Flat base theme. Mostly adjustments of module rules
+*/
+@import url(modules.less);
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+/** --------------------------------------------------------------
+ *  General
+ */
+
+@fontFamilyHeadings:  @fontFamilyCambria;
+@fontFamilyBody:      @fontFamilyCalibri;
+@fontFamilyCode:      @fontFamilyCourier;
+
+body {
+    margin: 0;
+
+    // To avoid weird problem with small horizontal scrolling
+    overflow-x: hidden;
+}
+
+.outer-wrap-header,
+// .outer-wrap-flash,
+.outer-wrap-breadcrumb,
+.outer-wrap-main,
+.outer-wrap-after-main,
+.footer-column-wrapper {
+    margin-bottom: @magicNumber;
+}
+
+/** --------------------------------------------------------------
+ *  Header, originally from example/anax-flat/theme/header.less
+ */
+
+.outer-wrap-header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: @magicNumber * 3;
+
+    @media screen and (min-width: 700px) {
+        height: @magicNumber * 5;
+    }
+}
+
+.outer-wrap-header {
+    height: @magicNumber * 3;
+
+    @media screen and (min-width: 700px) {
+        height: @magicNumber * 5;
+    }
+}
+
+.inner-wrap-header {
+    font-family: @fontFamilyHeadings;
+}
+
+.site-logo-text {
+    font-size: 2em;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.rm-desktop {
+    line-height: @magicNumber * 2;
+    a {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+// Size of max navbar button
+@maxButtonFontSize: 2em;
+
+.rm-max {
+    &.rm-navbar {
+        position: absolute;
+        top: 6px;
+        right: 20px;
+    }
+    .rm-small .rm-button.rm-clicked {
+        position: fixed;
+        top: 6px;
+        right: 20px;
+    }
+    i {
+        font-style: normal;
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+
+.footer-column-wrapper {
+    padding-top: @magicNumber;
+}
+
+.site-footer {
+    text-align: center;
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Images
+ */
+
+.logo-1 {
+    // position: absolute;
+    // top: 70px;
+    // left: -140px;
+    display: none;
+}
+
+.site-logo-text-icon {
+    // img {
+    //     vertical-align: bottom;
+    // }
+    display: none;
+}
+
+.article-img {
+    max-width: 50%;
+    float: right;
+    margin: 7px;
+    @media screen and (min-width: 460px) {
+        width: 250px;
+    }
+}
+
+.route-analysis-colorscheme main img {
+    display: block;
+
+    height: @magicNumber * 6;
+
+    @media screen and (min-width: 360px) {
+        height: @magicNumber * 8;
+    }
+
+    @media screen and (min-width: 445px) {
+        height: @magicNumber * 10;
+    }
+
+    @media screen and (min-width: 540px) {
+        height: @magicNumber * 12;
+    }
+
+    @media screen and (min-width: 660px) {
+        height: @magicNumber * 14;
+    }
+
+    @media screen and (min-width: 750px) {
+        height: @magicNumber * 10;
+    }
+
+    @media screen and (min-width: 810px) {
+        height: @magicNumber * 12;
+    }
+
+    @media screen and (min-width: 960px) {
+        height: @magicNumber * 14;
+    }
+}
+
+/** --------------------------------------------------------------
+ *  Other
+ */
+
+// .flash-wrap {
+//     line-height: 0;
+//     img {
+//         height: @magicNumber * 4;
+//
+//         @media screen and (min-width: 500px) {
+//             height: @magicNumber * 5;
+//         }
+//
+//         @media screen and (min-width: 630px) {
+//             height: @magicNumber * 6;
+//         }
+//
+//         @media screen and (min-width: 760px) {
+//             height: @magicNumber * 7;
+//         }
+//
+//         @media screen and (min-width: 885px) {
+//             height: @magicNumber * 8;
+//         }
+//     }
+// }
+
+.breadcrumb-list {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+
+        &::after {
+            content: " » ";
+        }
+    }
+}
+
+.next-previous {
+    .next,
+    .previous {
+        width: 50%;
+    }
+
+    .next {
+        float: right;
+        text-align: right;
+    }
+}
+
+.byline {
+    height: @magicNumber * 5;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img,
+    .route-analysis-colorscheme & img {
+        height: 90%;
+    }
+}

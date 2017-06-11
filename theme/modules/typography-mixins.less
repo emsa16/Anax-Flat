@@ -1,6 +1,9 @@
 /**
  * Typographic mixins.
  */
+
+// Vad är detta ens för? Används bara en gång nu i typography-defaults, är den för
+// att defaultställa fonten?
 .font(@fontSize: 100.01%, @fontFamily: @fontFamilyBody) {
     font: @fontSize/@lineHeight @fontFamily;
 }
@@ -12,7 +15,7 @@
 
 // 5/4 for smaller font-size, incremental leading.
 
-.border-bottom(@width: 1px, @color: #000) {
+.border-bottom(@width, @style, @color) {
    margin-top: -(@width);
-   border-bottom: @width dashed @color;
+   border-bottom: @width @style @color;
 }

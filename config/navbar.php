@@ -46,11 +46,17 @@ return [
                 "mark-if-parent" => true,
             ],
 
-            "test" => [
-                "text"  => t("Test"),
-                "url"   => $this->di->get("url")->create("test"),
-                "title" => t("Detta är en testsida")
-            ]
+            "themes" => [
+                "text"  => t("Teman"),
+                "url"   => $this->di->get("url")->create("theme"),
+                "title" => t("Beskrivning av de teman som finns i temaväljaren")
+            ],
+
+            // "test" => [
+            //     "text"  => t("Test"),
+            //     "url"   => $this->di->get("url")->create("test"),
+            //     "title" => t("Detta är en testsida")
+            // ]
         ],
     ],
 
@@ -93,11 +99,24 @@ return [
                 "title" => t("Testa typografiskt (horisontellt) grid")
             ],
 
-            "test" => [
-                "text"  => t("Test"),
-                "url"   => $this->di->get("url")->create("test"),
-                "title" => t("Detta är en testsida")
-            ]
+            "analysis" => [
+                "text"  => t("Analyser"),
+                "url"   => $this->di->get("url")->create("analysis"),
+                "title" => t("Analysuppgifter"),
+                "mark-if-parent" => true,
+            ],
+
+            "themes" => [
+                "text"  => t("Teman"),
+                "url"   => $this->di->get("url")->create("theme"),
+                "title" => t("Beskrivning av de teman som finns i temaväljaren")
+            ],
+
+            // "test" => [
+            //     "text"  => t("Test"),
+            //     "url"   => $this->di->get("url")->create("test"),
+            //     "title" => t("Detta är en testsida")
+            // ]
         ],
     ],
 
