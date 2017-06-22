@@ -7,7 +7,7 @@ Emils Anax Flat-sida
 
 Hej och välkommen till min första sida gjord i Anax Flat.
 
-<img class="article-img" src="img/profile.jpg" alt="Bild på Emil Sandberg">
+<img class="article-img" src="image/profile.jpg?f=grayscale" alt="Bild på Emil Sandberg">
 
 * studerat och arbetat med teater och tv sedan 2005
 * studerat projektledning inom kultur
