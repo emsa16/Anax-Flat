@@ -52,6 +52,18 @@ return [
                 "title" => t("Beskrivning av de teman som finns i temaväljaren")
             ],
 
+            "images" => [
+                "text"  => t("Bilder"),
+                "url"   => $this->di->get("url")->create("images"),
+                "title" => t("Testsida för responsiva bilder med LESS")
+            ],
+
+            "blogg" => [
+                "text"  => t("Blogg"),
+                "url"   => $this->di->get("url")->create("blogg"),
+                "title" => t("Bloggen Dagens foto")
+            ],
+
             // "test" => [
             //     "text"  => t("Test"),
             //     "url"   => $this->di->get("url")->create("test"),
@@ -110,6 +122,18 @@ return [
                 "text"  => t("Teman"),
                 "url"   => $this->di->get("url")->create("theme"),
                 "title" => t("Beskrivning av de teman som finns i temaväljaren")
+            ],
+
+            "images" => [
+                "text"  => t("Bilder"),
+                "url"   => $this->di->get("url")->create("images"),
+                "title" => t("Testsida för responsiva bilder med LESS")
+            ],
+
+            "blogg" => [
+                "text"  => t("Blogg"),
+                "url"   => $this->di->get("url")->create("blogg"),
+                "title" => t("Bloggen Dagens foto")
             ],
 
             // "test" => [

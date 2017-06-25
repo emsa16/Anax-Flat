@@ -46,7 +46,7 @@
     .column(@columns / 4 * 3); // 9 columns on a 12 column grid
     .push(@columns / 12); // 1 column on a 12 column grid
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 850px) {
         .column(@columns / 3); // 4 columns on a 12 column grid
         .push(@columns / 12); // 1 column on a 12 column grid
     }
@@ -57,12 +57,17 @@
     // background-color: rgba(255, 255, 0, 0.5);
     display: none;
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 850px) {
+        .column(@columns);
+        .push(@columns / 12); // 1 column on a 12 column grid
+    }
+
+    @media screen and (min-width: 950px) {
         .column(@columns);
         .push(@columns / 6); // 2 columns on a 12 column grid
     }
 
-    @media screen and (min-width: 800px) {
+    @media screen and (min-width: 1100px) {
         .column(@columns);
         .push(@columns / 4); // 3 columns on a 12 column grid
     }
@@ -71,7 +76,7 @@
 .profile {
     .column(@columns / 4); // 3 columns on a 12 column grid
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: 850px) {
         display: none;
     }
 }

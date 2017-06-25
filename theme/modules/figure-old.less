@@ -1,0 +1,136 @@
+/** --------------------------------------------------------------
+ * Module for a responsive figure element through .figure
+ */
+
+.figure {
+    display: table;
+    padding: 0;
+    margin: 0;
+    margin-bottom: @magicNumber - 4px;
+    border: 2px solid #7F6300;
+
+    img {
+        // max-width: 100%; // Make images responsive
+        display: block;
+    }
+
+    figcaption {
+        display: table-caption;
+        caption-side: bottom;
+        padding-top: @magicNumber / 2;
+        padding-bottom: @magicNumber / 2;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    /* Chrome shinks images in td */
+    td img {
+        max-width: none;
+    }
+
+    &.center {
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+
+        figcaption {
+            text-align: center;
+        }
+    }
+
+    /* Image positioning on very small screens */
+    &.left,
+    &.right {
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    &.hsmall img {
+        height: @magicNumber * 6;
+    }
+
+    &.hmedium img {
+        height: @magicNumber * 9;
+    }
+
+    &.hlarge img {
+        height: @magicNumber * 15;
+    }
+
+    // &.w50 {
+    //     min-width: 100%;
+    // }
+
+    @media screen {
+        @media (min-width: 320px) {
+
+            /* Position the images normally */
+            &.left {
+                float: left;
+                margin-right: 8px;
+            }
+
+            &.right {
+                float: right;
+                margin-left: 8px;
+            }
+
+            // &.hsmall img {
+            //     height: @magicNumber * 2;
+            // }
+            //
+            // &.hmedium img {
+            //     height: @magicNumber * 4;
+            // }
+            //
+            // &.hlarge img {
+            //     height: @magicNumber * 8;
+            // }
+        }
+
+        @media (min-width: 400px) {
+            // &.hsmall img {
+            //     height: @magicNumber * 3;
+            // }
+            //
+            // &.hmedium img {
+            //     height: @magicNumber * 6;
+            // }
+            //
+            // &.hlarge img {
+            //     height: @magicNumber * 12;
+            // }
+        }
+
+        @media (min-width: 450px) {
+            // &.hsmall img {
+            //     height: @magicNumber * 4;
+            // }
+            // 
+            // &.hmedium img {
+            //     height: @magicNumber * 7;
+            // }
+            //
+            // &.hlarge img {
+            //     height: @magicNumber * 15;
+            // }
+        }
+
+        @media (min-width: 750px) {
+            &.hsmall img {
+                height: @magicNumber * 6;
+            }
+
+            &.hmedium img {
+                height: @magicNumber * 12;
+            }
+
+            &.hlarge img {
+                height: @magicNumber * 25;
+            }
+        }
+    }
+}

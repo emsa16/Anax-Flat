@@ -29,7 +29,7 @@ För att få exakta siffror på sidladdningen så har jag använt Mozilla Firefo
 
 
 ## 1. [Simogo](http://simogo.com/)
-![simogo.com](image/analysis/simogo.com.png?w=700)
+![simogo.com](image/analysis/simogo.com.png?w=700&save-as=jpg&q=90)
 
 ### Resultat
 <table class="styled">
@@ -71,7 +71,7 @@ För att få exakta siffror på sidladdningen så har jag använt Mozilla Firefo
 Vad jag trodde skulle vara en lätt sida fick väldigt dåliga betyg, framförallt på grund av hur dåligt sidan hanterar bilder. Deras bloggsida laddar också in väldigt många bildtunga inlägg samtidigt. Det fanns många förbättringsåtgärder som Google PageSpeed föreslog men de viktigaste är att optimera bilder, aktivera komprimering samt ta bort JavaScript- och CSS-kod som blockerar renderingen från innehåll ovanför mitten.
 
 ## 2. [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
-![en.wikipedia.org](image/analysis/en.wikipedia.org.png?w=700)
+![en.wikipedia.org](image/analysis/en.wikipedia.org.png?w=700&save-as=jpg&q=90)
 
 ### Resultat
 <table class="styled">
@@ -113,7 +113,7 @@ Vad jag trodde skulle vara en lätt sida fick väldigt dåliga betyg, framföral
 Wikipedia fick bäst betyg av alla sidor i detta test, vilket inte är så förvånande med tanke på att det är en välbesökt sida som behöver vara optimerad. Sidorna är lätta och laddar snabbt. PageSpeed har endast några förbättringsförslag: optimera bilder, utnyttja cachelagring i webbläsare (men detta verkar ändå skötas relativt bra) samt ta bort JavaScript- och CSS-kod som blockerar renderingen från innehåll ovanför mitten.
 
 ## 3. [Thomann](https://www.thomann.de/se/index.html)
-![thomann.de](image/analysis/thomann.de.png?w=700)
+![thomann.de](image/analysis/thomann.de.png?w=700&save-as=jpg&q=90)
 
 ### Resultat
 <table class="styled">
@@ -157,7 +157,7 @@ Denna sida var väldigt tung och långsam att ladda in, på grund av den använd
 
 
 ## 4. [Min me-sida för design-kursen](http://www.student.bth.se/~emsa16/dbwebb-kurser/design/me/anax-flat/htdocs/)
-![anax-flat](image/analysis/anax-flat.png?w=700)
+![anax-flat](image/analysis/anax-flat.png?w=700&save-as=jpg&q=90)
 
 ### Resultat
 <table class="styled">

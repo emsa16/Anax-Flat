@@ -25,7 +25,7 @@ Jag har använt [Adobe Color CC](https://color.adobe.com/sv/create/image/) för 
 
 
 ## 1. [odpod.se](http://www.odpod.se/)
-![odpod.se](img/analysis/odpod.se.png)
+![odpod.se](image/analysis/odpod.se.png?w=700&save-as=jpg&q=90)
 
 ### Färgpalett
 <table class="palette">
@@ -58,7 +58,7 @@ Detta är en webbplats för en podcast om populärkultur, ett hobbyprojekt som i
 
 
 ## 2. [wasateater.fi](http://www.wasateater.fi/)
-![wasateater.fi](img/analysis/wasateater.fi.png)
+![wasateater.fi](image/analysis/wasateater.fi.png?w=700&save-as=jpg&q=90)
 
 ### Färgpalett
 <table class="palette">
@@ -89,7 +89,7 @@ Detta är en webbplats för en stadsteater. Syftet är att ge information om tea
 
 
 ## 3. [unity3d.com](https://unity3d.com/)
-![unity3d.com](img/analysis/unity3d.com.png)
+![unity3d.com](image/analysis/unity3d.com.png?w=700&save-as=jpg&q=90)
 
 ### Färgpalett
 <table class="palette">
@@ -122,7 +122,7 @@ Denna webbplats innehåller tjänster och information kring en spelmotor, som ka
 
 
 ## 4. [anderskarls.fi](http://www.anderskarls.fi/)
-![anderskarls.fi](img/analysis/anderskarls.fi.png)
+![anderskarls.fi](image/analysis/anderskarls.fi.png?w=700&save-as=jpg&q=90)
 
 ### Färgpalett
 <table class="palette">

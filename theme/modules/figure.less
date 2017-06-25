@@ -1,0 +1,109 @@
+/** --------------------------------------------------------------
+ * Module for a responsive figure element through .figure
+ */
+
+.figure {
+    display: table;
+    padding: 0;
+    margin: 0;
+    margin-bottom: @magicNumber - 4px;
+    border: 2px solid #7F6300;
+
+    a {
+
+    }
+
+    img {
+        max-width: 100%; // Make images responsive
+        display: block;
+    }
+
+    figcaption {
+        display: table-caption;
+        caption-side: bottom;
+        padding-top: @magicNumber / 2;
+
+        p {
+            margin-top: 0;
+            font-style: italic;
+        }
+    }
+
+    /* Chrome shinks images in td */
+    td img {
+        max-width: none;
+    }
+
+    &.center {
+        clear: both;
+        margin: auto;
+
+        figcaption {
+            text-align: center;
+        }
+    }
+
+    &.w25 {
+        width: 150px;
+    }
+
+    &.w50 {
+        min-width: 100%;
+    }
+
+    @media screen {
+        @media (min-width: 320px) {
+            /* Position the images */
+            &.left {
+                float: left;
+                margin-right: 8px;
+            }
+
+            &.right {
+                float: right;
+                margin-left: 8px;
+            }
+
+            &.w25 {
+                width: 100px;
+            }
+
+            &.w50 {
+                min-width: initial;
+                width: 150px;
+            }
+        }
+
+        @media (min-width: 400px) {
+            &.w50 {
+                width: 200px;
+            }
+        }
+
+        @media (min-width: 500px) {
+            &.w25 {
+                width: 150px;
+            }
+
+            &.w50 {
+                width: 250px;
+            }
+        }
+
+        @media (min-width: 600px) {
+            &.w50 {
+                width: 300px;
+            }
+        }
+
+        @media (min-width: 850px) {
+            &.w25 {
+                width: auto;
+            }
+
+            &.w50 {
+                width: auto;
+            }
+        }
+    }
+}
