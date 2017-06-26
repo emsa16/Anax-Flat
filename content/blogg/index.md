@@ -16,7 +16,7 @@ views:
         sort: 2
         data:
             # dateFormat: j F Y
-            dateFormat: %e %B %Y
+            dateFormat: "%e %B %Y"
             meta:
                 type: toc
                 items: 10
