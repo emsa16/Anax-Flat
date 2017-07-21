@@ -64,6 +64,12 @@ return [
                 "title" => t("Bloggen Dagens foto")
             ],
 
+            "principles" => [
+                "text"  => t("Designprinciper"),
+                "url"   => $this->di->get("url")->create("design-principle"),
+                "title" => t("Beskrivning av de teman som följer specifika designprinciper")
+            ],
+
             // "test" => [
             //     "text"  => t("Test"),
             //     "url"   => $this->di->get("url")->create("test"),
@@ -134,6 +140,12 @@ return [
                 "text"  => t("Blogg"),
                 "url"   => $this->di->get("url")->create("blogg"),
                 "title" => t("Bloggen Dagens foto")
+            ],
+
+            "principles" => [
+                "text"  => t("Designprinciper"),
+                "url"   => $this->di->get("url")->create("design-principle"),
+                "title" => t("Beskrivning av de teman som följer specifika designprinciper")
             ],
 
             // "test" => [

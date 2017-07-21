@@ -77,7 +77,33 @@ return [
             ]
         ],
 
-        // "separator2" => "------------------------------------------------",
+        "separator2" => "------------------------------------------------",
+
+        "movement" => [
+            "title"      => "Following the movement/direction design principle",
+            "class"      => "",
+            "stylesheets" => [
+                "css/movement.min.css"
+            ]
+        ],
+
+        "unity" => [
+            "title"      => "Following the unity design principle",
+            "class"      => "",
+            "stylesheets" => [
+                "css/unity.min.css"
+            ]
+        ],
+
+        "contrast" => [
+            "title"      => "Following the contrast design principle",
+            "class"      => "",
+            "stylesheets" => [
+                "css/contrast.min.css"
+            ]
+        ],
+
+        // "separator3" => "------------------------------------------------",
 
         // "fun"       => [
             // "title"      => "All fun, test and play, make it stand out!",

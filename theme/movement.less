@@ -1,0 +1,27 @@
+/* stylelint-disable indentation */
+
+/**
+* Anax Flat movement design principle theme.
+*/
+@import url(base.less);
+
+html {
+    background-image:
+       radial-gradient(
+         ellipse farthest-corner at center 65%,
+         #EAFCD4 15%,
+         #177B98 100%
+       );
+}
+
+.inner-wrap-header {
+    background-color: rgba(100,100,100,0.25);
+}
+
+.inner-wrap-header:after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: rgba(100,100,100,0.25) transparent transparent transparent;
+    border-width: 50px 480px 0 480px;
+}
