@@ -14,29 +14,17 @@ return [
         // Here comes the menu structure
         "items" => [
 
-            "report" => [
-                "text"  => t("Redovisning"),
-                "url"   => $this->di->get("url")->create("report"),
-                "title" => t("Redovisningar av olika kursmoment"),
-                "mark-if-parent" => true,
-            ],
-
             "about" => [
                 "text"  => t("Om"),
                 "url"   => $this->di->get("url")->create("about"),
                 "title" => t("Om denna webbsida")
             ],
 
-            "vgrid" => [
-                "text"  => t("Vgrid"),
-                "url"   => $this->di->get("url")->create("grid"),
-                "title" => t("Testa vertikalt grid")
-            ],
-
-            "hgrid" => [
-                "text"  => t("Hgrid"),
-                "url"   => $this->di->get("url")->create("typography"),
-                "title" => t("Testa typografiskt (horisontellt) grid")
+            "report" => [
+                "text"  => t("Redovisning"),
+                "url"   => $this->di->get("url")->create("report"),
+                "title" => t("Redovisningar av olika kursmoment"),
+                "mark-if-parent" => true,
             ],
 
             "analysis" => [
@@ -49,13 +37,59 @@ return [
             "themes" => [
                 "text"  => t("Teman"),
                 "url"   => $this->di->get("url")->create("theme"),
-                "title" => t("Beskrivning av de teman som finns i temaväljaren")
+                "title" => t("Beskrivning av de teman som finns i temaväljaren"),
+                "submenu" => [
+                    "items" => [
+
+                        "themes" => [
+                            "text"  => t("Grundteman"),
+                            "url"   => $this->di->get("url")->create("theme"),
+                            "title" => t("Beskrivning av de teman som finns i temaväljaren"),
+                        ],
+
+                        "principles" => [
+                            "text"  => t("Designprinciper"),
+                            "url"   => $this->di->get("url")->create("design-principle"),
+                            "title" => t("Beskrivning av de teman som följer specifika designprinciper")
+                        ],
+
+                        "elements" => [
+                            "text"  => t("Designelement"),
+                            "url"   => $this->di->get("url")->create("design-element"),
+                            "title" => t("Beskrivning av de teman som följer specifika designelement")
+                        ],
+
+                    ]
+                ]
             ],
 
-            "images" => [
-                "text"  => t("Bilder"),
-                "url"   => $this->di->get("url")->create("images"),
-                "title" => t("Testsida för responsiva bilder med LESS")
+            "tests" => [
+                "text"  => t("Tester"),
+                "url"   => $this->di->get("url")->create("test"),
+                "title" => t("Testsidor"),
+                "submenu" => [
+                    "items" => [
+
+                        "vgrid" => [
+                            "text"  => t("Vgrid"),
+                            "url"   => $this->di->get("url")->create("grid"),
+                            "title" => t("Testa vertikalt grid")
+                        ],
+
+                        "hgrid" => [
+                            "text"  => t("Hgrid"),
+                            "url"   => $this->di->get("url")->create("typography"),
+                            "title" => t("Testa typografiskt (horisontellt) grid")
+                        ],
+
+                        "images" => [
+                            "text"  => t("Bilder"),
+                            "url"   => $this->di->get("url")->create("images"),
+                            "title" => t("Testsida för responsiva bilder med LESS")
+                        ],
+
+                    ]
+                ]
             ],
 
             "blogg" => [
@@ -63,18 +97,6 @@ return [
                 "url"   => $this->di->get("url")->create("blogg"),
                 "title" => t("Bloggen Dagens foto")
             ],
-
-            "principles" => [
-                "text"  => t("Designprinciper"),
-                "url"   => $this->di->get("url")->create("design-principle"),
-                "title" => t("Beskrivning av de teman som följer specifika designprinciper")
-            ],
-
-            // "test" => [
-            //     "text"  => t("Test"),
-            //     "url"   => $this->di->get("url")->create("test"),
-            //     "title" => t("Detta är en testsida")
-            // ]
         ],
     ],
 
@@ -92,29 +114,17 @@ return [
         // Here comes the menu structure
         "items" => [
 
-            "report" => [
-                "text"  => t("Redovisning"),
-                "url"   => $this->di->get("url")->create("report"),
-                "title" => t("Redovisningar av olika kursmoment"),
-                "mark-if-parent" => true,
-            ],
-
             "about" => [
                 "text"  => t("Om"),
                 "url"   => $this->di->get("url")->create("about"),
                 "title" => t("Om denna webbsida")
             ],
 
-            "vgrid" => [
-                "text"  => t("Vgrid"),
-                "url"   => $this->di->get("url")->create("grid"),
-                "title" => t("Testa vertikalt grid")
-            ],
-
-            "hgrid" => [
-                "text"  => t("Hgrid"),
-                "url"   => $this->di->get("url")->create("typography"),
-                "title" => t("Testa typografiskt (horisontellt) grid")
+            "report" => [
+                "text"  => t("Redovisning"),
+                "url"   => $this->di->get("url")->create("report"),
+                "title" => t("Redovisningar av olika kursmoment"),
+                "mark-if-parent" => true,
             ],
 
             "analysis" => [
@@ -127,13 +137,59 @@ return [
             "themes" => [
                 "text"  => t("Teman"),
                 "url"   => $this->di->get("url")->create("theme"),
-                "title" => t("Beskrivning av de teman som finns i temaväljaren")
+                "title" => t("Beskrivning av de teman som finns i temaväljaren"),
+                "submenu" => [
+                    "items" => [
+
+                        "themes" => [
+                            "text"  => t("Grundteman"),
+                            "url"   => $this->di->get("url")->create("theme"),
+                            "title" => t("Beskrivning av de teman som finns i temaväljaren"),
+                        ],
+
+                        "principles" => [
+                            "text"  => t("Designprinciper"),
+                            "url"   => $this->di->get("url")->create("design-principle"),
+                            "title" => t("Beskrivning av de teman som följer specifika designprinciper")
+                        ],
+
+                        "elements" => [
+                            "text"  => t("Designelement"),
+                            "url"   => $this->di->get("url")->create("design-element"),
+                            "title" => t("Beskrivning av de teman som följer specifika designelement")
+                        ],
+
+                    ]
+                ]
             ],
 
-            "images" => [
-                "text"  => t("Bilder"),
-                "url"   => $this->di->get("url")->create("images"),
-                "title" => t("Testsida för responsiva bilder med LESS")
+            "tests" => [
+                "text"  => t("Tester"),
+                "url"   => $this->di->get("url")->create("test"),
+                "title" => t("Testsidor"),
+                "submenu" => [
+                    "items" => [
+
+                        "vgrid" => [
+                            "text"  => t("Vgrid"),
+                            "url"   => $this->di->get("url")->create("grid"),
+                            "title" => t("Testa vertikalt grid")
+                        ],
+
+                        "hgrid" => [
+                            "text"  => t("Hgrid"),
+                            "url"   => $this->di->get("url")->create("typography"),
+                            "title" => t("Testa typografiskt (horisontellt) grid")
+                        ],
+
+                        "images" => [
+                            "text"  => t("Bilder"),
+                            "url"   => $this->di->get("url")->create("images"),
+                            "title" => t("Testsida för responsiva bilder med LESS")
+                        ],
+
+                    ]
+                ]
             ],
 
             "blogg" => [
@@ -141,18 +197,6 @@ return [
                 "url"   => $this->di->get("url")->create("blogg"),
                 "title" => t("Bloggen Dagens foto")
             ],
-
-            "principles" => [
-                "text"  => t("Designprinciper"),
-                "url"   => $this->di->get("url")->create("design-principle"),
-                "title" => t("Beskrivning av de teman som följer specifika designprinciper")
-            ],
-
-            // "test" => [
-            //     "text"  => t("Test"),
-            //     "url"   => $this->di->get("url")->create("test"),
-            //     "title" => t("Detta är en testsida")
-            // ]
         ],
     ],
 

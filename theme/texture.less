@@ -1,0 +1,80 @@
+/* stylelint-disable indentation */
+
+/**
+* Anax Flat texture theme.
+*/
+@import url(base.less);
+
+body {
+    position: relative;
+}
+
+.outer-wrap-main::before {
+    content: "";
+    position: absolute;
+    top: 200px;
+    right: 0;
+    width: 220px;
+    height: 170px;
+    background-image: url("../img/pc.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -2;
+    opacity: 0.2;
+}
+
+.outer-wrap-main::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/circuit.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -2;
+    opacity: 0.2;
+}
+
+.inner-wrap {
+    background-image: url("../img/memphis-colorful.png");
+    border: 1px solid aqua;
+}
+
+.wrap-all::before,
+.wrap-all::after,
+.outer-wrap-footer::before,
+.outer-wrap-footer::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.wrap-all::before {
+    top: 0%;
+    left: 0%;
+    border-top: 500px solid aliceblue;
+    border-right: 500px solid transparent;
+}
+
+// .wrap-all::after {
+//     top: 0%;
+//     right: 0%;
+//     border-top: 170px solid aliceblue;
+//     border-left: 170px solid transparent;
+// }
+
+// .outer-wrap-footer::before {
+//     bottom: 0%;
+//     left: 0%;
+//     border-bottom: 170px solid aliceblue;
+//     border-right: 170px solid transparent;
+// }
+
+.outer-wrap-footer::after {
+    bottom: 0%;
+    right: 0%;
+    border-bottom: 500px solid aliceblue;
+    border-left: 500px solid transparent;
+}

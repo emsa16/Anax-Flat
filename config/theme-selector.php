@@ -103,7 +103,33 @@ return [
             ]
         ],
 
-        // "separator3" => "------------------------------------------------",
+        "separator3" => "------------------------------------------------",
+
+        "transparent" => [
+            "title"      => "Theme showcasing transparent elements and image backgrounds",
+            "class"      => "",
+            "stylesheets" => [
+                "css/transparent.min.css"
+            ]
+        ],
+
+        "gradients" => [
+            "title"      => "Theme showcasing gradients and lines",
+            "class"      => "",
+            "stylesheets" => [
+                "css/gradients.min.css"
+            ]
+        ],
+
+        "texture" => [
+            "title"      => "Theme showcasing textures and small image elements",
+            "class"      => "",
+            "stylesheets" => [
+                "css/texture.min.css"
+            ]
+        ],
+
+        // "separator4" => "------------------------------------------------",
 
         // "fun"       => [
             // "title"      => "All fun, test and play, make it stand out!",
